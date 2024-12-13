@@ -1,4 +1,3 @@
-
 BACKLOG
 
 MILESTONE: Gameboard creation
@@ -29,8 +28,6 @@ MILESTONE: Player X won with a vertical line
   [ , , ]
 
 - The players takes turn placing markers
-
-- There is a paus between turns (not essential, ask PO or customer?)
 
 - Player X makes a vertical line -> Player wins
 
@@ -69,3 +66,5 @@ MILESTONE: The game ends in a draw
   [O,X,O]
 
 - The draw result is printed on the screen
+
+- There is a paus between turns (not essential, ask PO or customer?)

@@ -19,12 +19,17 @@ The game ends when there is a winner, or if the result is a draw.
             When the game starts
             Then Player X is the starting player
 
-    Rule: Player X places X-markers
+    Rule: The correct symbol is shown for the players markers
 
-        Scenario: Player X can only place X-markers
+        Scenario: Player X place X-markers
             Given the it is Player X turn
             When Player X places a marker
             Then an X marker is printed on the screen in the correct place
+
+        Scenario: Player O place O-markers
+            Given the it is Player O turn
+            When Player O places a marker
+            Then an O marker is printed on the screen in the correct place
 
     Rule: Markers can only be placed in an empty spot
 
@@ -137,3 +142,17 @@ The game ends when there is a winner, or if the result is a draw.
             Then the game is ended
 
     #THE FIFTH MILESTONE IS TESTED
+
+
+    #Depending on the customers desire, this could be done sooner but it's not specified in the requirments if it's
+    #important to have this early in the development
+
+    Rule: There is a 2 second paus between turns
+
+        Given that Player X placed the last previous marker
+            When the game continues
+            Then there should be a two second paus
+
+            Given that Player O placed the last previous marker
+            When the game continues
+            Then there should be a two second paus
