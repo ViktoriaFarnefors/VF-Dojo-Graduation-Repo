@@ -59,17 +59,31 @@ The game ends when there is a winner, or if the result is a draw.
 
     Rule: A player can win with a vertical line
 
+        #Scenarios below is based on a board with numbered spaces from 1-9
+
         Scenario: Player X wins with a vertical line
-            Given that Player X has placed it's markers in a vertical line
+            Given that Player X has placed it's markers in the spaces <space1>, <space2> and <space3>
             When Player X turn has ended
             Then Player X is named the winner
 
+        Examples:
+          | space1 | space2 | space3 |
+          | 1      | 4      | 7      |
+          | 2      | 5      | 8      |
+          | 3      | 6      | 9      |
+
         Scenario: Player O wins with a vertical line
-            Given that Player O has placed it's markers in a vertical line
+            Given that Player O has placed it's markers in the spaces <space1>, <space2> and <space3>
             When Player O turn has ended
             Then Player O is named the winner
 
-    #THE SECOND MILESTONE IS TESTED
+        Examples:
+          | space1 | space2 | space3 |
+          | 1      | 4      | 7      |
+          | 2      | 5      | 8      |
+          | 3      | 6      | 9      |
+
+          #THE SECOND MILESTONE IS TESTED
 
     Rule: The winners name is printed on the screen
 
@@ -95,31 +109,57 @@ The game ends when there is a winner, or if the result is a draw.
 
     Rule: A player can win with a horizontal line
 
+        #Scenarios below is based on a board with numbered spaces from 1-9
+
         Scenario: Player X wins with a horizontal line
-            Given that Player X has placed it's markers in a horizontal line
+            Given that Player X has placed it's markers in the spaces <space1>, <space2> and <space3>
             When Player X turn has ended
             Then Player X is named the winner
 
+        Examples:
+          | space1 | space2 | space3 |
+          | 1      | 2      | 3      |
+          | 4      | 5      | 6      |
+          | 7      | 8      | 9      |
+
         Scenario: Player O wins with a horizontal line
-            Given that Player O has placed it's markers in a horizontal line
+            Given that Player O has placed it's markers in the spaces <space1>, <space2> and <space3>
             When Player O turn has ended
             Then Player O is named the winner
 
-    #THE THIRD MILESTONE IS TESTED
+        Examples:
+          | space1 | space2 | space3 |
+          | 1      | 2      | 3      |
+          | 4      | 5      | 6      |
+          | 7      | 8      | 9      |
+
+          #THE THIRD MILESTONE IS TESTED
 
     Rule: A player can win with a diagonal line
 
+        #Scenarios below is based on a board with numbered spaces from 1-9
+
         Scenario: Player X wins with a diagonal line
-            Given that Player X has placed it's markers in a diagonal line
+            Given that Player X has placed it's markers in the spaces <space1>, <space2> and <space3>
             When Player X turn has ended
             Then Player X is named the winner
 
+        Examples:
+          | space1 | space2 | space3 |
+          | 1      | 5      | 9      |
+          | 3      | 5      | 7      |
+
         Scenario: Player O wins with a diagonal line
-            Given that Player O has placed it's markers in a diagonal line
+            Given that Player O has placed it's markers in the spaces <space1>, <space2> and <space3>
             When Player O turn has ended
             Then Player O is named the winner
 
-    #THE FOURTH MILESTONE IS TESTED
+        Examples:
+          | space1 | space2 | space3 |
+          | 1      | 5      | 9      |
+          | 3      | 5      | 7      |
+
+          #THE FOURTH MILESTONE IS TESTED
 
     Rule: The game can end in a draw
 
